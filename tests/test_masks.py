@@ -15,7 +15,7 @@ def test_correct_mask_card(card_number: str) -> str:
     ],
 )
 def test_correct_card_mask(value: str, expected: str) -> str:
-    assert get_mask_account(value) == expected
+    assert get_mask_card_number(value) == expected
 
 
 def test_correct_mask_account(account_number: str) -> str:
