@@ -7,11 +7,17 @@
 - Наложение масок(номер карты, номер счёта)
 - Фильтры словарей-списков
 - Сортировка словарей-списков
+
+## Тестирование:
+Покрытие тестов 97%
+
 ### Требования:
 Для установки и запуска проекта, необходимы:
 - [Python](https://www.python.org/downloads/) v3.10+.
 - poetry 0.1.0.
 - ### Зависимости:
+- poetry add pytest
+- poetry add pytest-cov
 - poetry add flake8
 - poetry add mypy
 - poetry add isort
