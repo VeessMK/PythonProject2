@@ -4,7 +4,7 @@ from src.processing import filter_by_state, sort_by_date
 
 from src.widget import get_date, mask_account_card
 
-from src.generators import filter_by_currency
+from src.generators import filter_by_currency, transaction_descriptions
 
 print(get_mask_card_number("7000792289606361"))
 
@@ -79,4 +79,10 @@ transactions = [
     }
 ]
 
-print(list(filter_by_currency(transactions, "USD")))
+usd_transactions = filter_by_currency(transactions, "USD")
+for _ in range(1):
+    print(next(usd_transactions))
+
+descriptions = transaction_descriptions(transactions)
+for _ in range(1):
+    print(next(descriptions))
