@@ -2,6 +2,10 @@ from functools import wraps
 
 
 def log(filename=None):
+    """
+    Автоматически логирует начало и конец функции, а также ёё резульзаты и ошибки.
+    """
+
     def inner(function):
         @wraps(function)
         def wrapper(*args, **kwargs):
