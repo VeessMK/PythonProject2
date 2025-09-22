@@ -21,6 +21,7 @@
 - ### Зависимости:
 - poetry add pytest
 - poetry add pytest-cov
+- poetry add python-dotenv
 - poetry add flake8
 - poetry add mypy
 - poetry add isort
