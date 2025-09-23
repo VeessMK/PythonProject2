@@ -12,7 +12,7 @@
 - Декораторы
 
 ## Тестирование:
-Покрытие тестов 99%
+Покрытие тестов 86%
 
 ### Требования:
 Для установки и запуска проекта, необходимы:
@@ -21,6 +21,7 @@
 - ### Зависимости:
 - poetry add pytest
 - poetry add pytest-cov
+- poetry add python-dotenv
 - poetry add flake8
 - poetry add mypy
 - poetry add isort
