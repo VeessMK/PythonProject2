@@ -13,12 +13,6 @@ def transaction_loading(file_path: str) -> List[Dict]:
     :return: Возвращает список словарей с данными о финансовых транзакциях
     """
     try:
-        if not os.path.exists(file_path):
-            return []
-
-        if os.path.getsize(file_path) == 0:
-            return []
-
         with open(file_path, "r", encoding="utf-8") as file:
             data = json.load(file)
 
@@ -27,7 +21,11 @@ def transaction_loading(file_path: str) -> List[Dict]:
         else:
             return []
 
-    except (json.JSONDecodeError, IOError, OSError):
+    except FileNotFoundError:
+        return []
+    except json.JSONDecodeError:
+        return []
+    except (IOError, OSError):
         return []
 
 
