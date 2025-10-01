@@ -10,15 +10,17 @@
 - Генератор карт
 - Итераторы
 - Декораторы
+- Читание файлов CSV- и XLSX, JSON 
 
 ## Тестирование:
-Покрытие тестов 86%
+Покрытие тестов 88%
 
 ### Требования:
 Для установки и запуска проекта, необходимы:
 - [Python](https://www.python.org/downloads/) v3.10+.
 - Poetry 0.1.0.
 - ### Зависимости:
+- poetry add pandas
 - poetry add pytest
 - poetry add pytest-cov
 - poetry add python-dotenv

@@ -10,7 +10,7 @@ log_file = os.path.join(os.path.dirname(__file__), "..", "logs", "utils.log")
 log_file = os.path.abspath(log_file)
 
 logger = logging.getLogger(__name__)
-file_handler = logging.FileHandler(log_file, mode='w', encoding="utf-8")
+file_handler = logging.FileHandler(log_file, mode="w", encoding="utf-8")
 file_formatter = logging.Formatter("%(asctime)s %(name)s %(levelname)s: %(message)s")
 file_handler.setFormatter(file_formatter)
 logger.addHandler(file_handler)
@@ -76,7 +76,6 @@ def transaction_exchange(transaction: Dict) -> float:
 
         logger.debug(f"Обработка транзакции: {transaction_amount} {transaction_currency}")
 
-        # Если валюта не USD или EUR, возвращаем исходную сумму
         if transaction_currency not in ("USD", "EUR"):
             logger.debug(f"Конвертация не требуется, валюта: {transaction_currency}")
             return transaction_amount
