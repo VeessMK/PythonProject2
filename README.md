@@ -22,6 +22,7 @@
 - [Python](https://www.python.org/downloads/) v3.10+.
 - Poetry 0.1.0.
 - ### Зависимости:
+- poetry add openpyxl
 - poetry add pandas
 - poetry add pytest
 - poetry add pytest-cov
