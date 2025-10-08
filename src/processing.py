@@ -8,7 +8,7 @@ def filter_by_state(list_dict: List[Dict[str, Any]], state: str = "EXECUTED") ->
     :param state: Значение для фильтрации
     :return: Отфильтрованный список словарей
     """
-    return [x for x in list_dict if x["state"] == state]
+    return [x for x in list_dict if x.get("state") == state]
 
 
 def sort_by_date(list_dict: List[Dict[str, Any]], reverse: bool = True) -> List[Dict[str, Any]]:
@@ -18,4 +18,4 @@ def sort_by_date(list_dict: List[Dict[str, Any]], reverse: bool = True) -> List[
     :param reverse: Порядок сортировки
     :return: Отсортированный список
     """
-    return sorted(list_dict, key=lambda x: x["date"], reverse=reverse)
+    return sorted(list_dict, key=lambda x: x.get("date", ""), reverse=reverse)
